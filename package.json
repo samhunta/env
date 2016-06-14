@@ -1,0 +1,41 @@
+{
+  "name": "actress-env",
+  "version": "0.1.1",
+  "description": "Test if the environment is a browser, bundler, node, or react native",
+  "author": "The Actress Authors",
+  "license": "MIT",
+  "main": "dist/actress-env.js",
+  "browser": "lib/index-browser.js",
+  "web": "lib/index-browser.js",
+  "repository": "actress/actress-env",
+  "bugs": {
+    "url": "https://github.com/actress/env/issues"
+  },
+  "homepage": "https://github.com/actress/env",
+  "keywords": [
+    "isbrowser",
+    "is-browser",
+    "universal",
+    "isomorphic",
+    "environment",
+    "client",
+    "server",
+    "react-native",
+    "actress"
+  ],
+  "scripts": {
+    "prepublish": "npm run dist",
+    "dist": "mkdirp dist && uglifyjs --compress --mangle -o dist/actress-env.js lib/index.js",
+    "test": "node test/test-all"
+  },
+  "files": [
+    "lib/index-browser.js",
+    "dist/actress-env.js"
+  ],
+  "_devDependencies": {
+    "chalk": "^1.1.3",
+    "jsdom": "^9.2.1",
+    "mkdirp": "^0.5.1",
+    "uglify-js": "^2.0.0"
+  }
+}
